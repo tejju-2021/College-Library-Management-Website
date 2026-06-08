@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Background & Links Example</title>
+
+<style>
+    body {
+        background-image: url('https://imgs.search.brave.com/jG_UKpN_mKcxzjqYHPZu06GF_NFMD8XURsu6IOV25SM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI1MDY4/MTcuanBn');
+        background-size: cover;        
+        background-repeat: no-repeat;
+        background-position: center;   
+        background-attachment: fixed;  
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+        color: black;
+    }
+    a:link {
+        color: blue;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    a:visited {
+        color: purple;
+    }
+    a:hover {
+        color: black;
+        text-decoration: underline;
+        font-size: 24px;
+    }
+    a:active {
+        color: green;
+        font-size: 22px;
+    }
+    .box {
+        background-image: url('https://imgs.search.brave.com/hoUpoSMfuzTKujPVew9jQsEcFuY_aj-IPJx27svcrGQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9saWZl/bmNvbG9ycy5pbi9j/ZG4vc2hvcC9wcm9k/dWN0cy84MWQ4Njhf/MWQ5MWFkZjhhOGVh/NDUyNzk0OTQxMWFm/ZjM0MWQ0NzNfbXYy/XzdkYzE1MWE0LTkz/NDUtNDU2OS1hN2M4/LTg4YWM2MWFlM2Ni/YS5qcGc_dj0xNzUz/Njk0NDc2JndpZHRo/PTMyMA');
+        background-repeat: repeat-x;
+        border: 3px solid black;
+        padding: 20px;
+        width: 50%;
+        margin: 30px auto;
+        color: #000;
+        background-size: contain;
+    }
+</style>
+</head>
+<body>
+<h2>CSS Background</h2>
+<div class="box">
+    Hover over the link below to see the effect:
+    <br><br>
+    <a href="https://google.com" target="_blank">Visit Example Website</a>
+</div>
+</body>
+</html>

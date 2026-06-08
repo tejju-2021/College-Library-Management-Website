@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(225, 196, 225);
+        }
+        h2{
+            text-align: center;
+        }
+        form {
+      max-width: 600px;
+      margin: 0 auto;
+    
+      padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <h2>Registration Form! </h2>
+    <form action="#" method="post" onsubmit="return validateForm()">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <br>
+        <div>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+        <br>
+        <div>
+            <label for="mail">E-Mail: </label>
+            <input type="email" name="mail" id="mail" required>
+        </div>
+        <br>
+        <div>
+            <label for="numb">Contact No.:</label>
+            <input type="text" name="numb" id="numb" required>
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <br>
+        <div>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" id="dob" required>
+        </div>
+        <br>
+        <div>
+            <label for="lang">Languages: </label>
+            <input type="checkbox" name="eng" id="eng">
+            <label for="eng">English</label>
+            <input type="checkbox" name="hindi" id="hindi">
+            <label for="hindi">Hindi</label>
+            <input type="checkbox" name="tamil" id="tamil">
+            <label for="tamil">Tamil</label>
+            <input type="checkbox" name="telugu" id="telugu">
+            <label for="telugu">Telugu</label>
+        </div>
+        <br>
+        <div>
+            <label for="address">Address: </label><br>
+            <textarea id="address" name="address"></textarea>
+        </div>
+        <br>
+        <div>
+           <input type="submit" value="Submit">
+           <input type="reset" value="Clear">
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+        
+            let name = document.getElementById("name").value.trim();
+            let pass = document.getElementById("pass").value.trim();
+            let email = document.getElementById("mail").value.trim();
+            let phone = document.getElementById("numb").value.trim();
+            let namePattern = /^[A-Za-z]{6,}$/;
+            if (!namePattern.test(name)) {
+                alert("Name must contain only alphabets and be at least 6 characters long.");
+                return false;
+            }
+            if (pass.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid email in the format name@domain.com");
+                return false;
+            }
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must contain exactly 10 digits only.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+        </script>
+</body>
+</html>
